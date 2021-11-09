@@ -1,0 +1,32 @@
+// @import "mixins";
+
+$primary-color: #ff752f;
+
+body {
+    color: $primary-color;
+}
+
+.button {
+    display: inline-block;
+    color: $primary-color;
+    text-align: center;
+    border: solid 2px $primary-color;
+}
+
+#box {
+    font: {
+        weight: bold;
+        family: Algerian;
+    }
+    
+    @mixin inline-block($margin : 10px) {
+        display: inline-block;
+        margin-left: $margin;
+    }
+}
+
+@for $i from 1 through 3 {
+    .m-#{$i} {
+        margin: 0 ($i*0.25rem);
+    }
+}
